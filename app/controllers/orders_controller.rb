@@ -2,8 +2,9 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    @products = @order.products
-    @quantity = Order.sum("products")
+    # @products = @order.products
+    # byebug
+    # @line_items = @order.line_items
   end
 
   def create

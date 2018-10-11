@@ -1,3 +1,5 @@
+<% product = Product.find_by(id: product_id) %>
+
 <tr>
   <td>
     <%= image_tag product.image.tiny %>
@@ -8,8 +10,9 @@
     <p><%= product.description %></p>
   </td>
   <td>
-    <%= product.price %>
+    <%= quantity %>
   </td>
   <td>
+    <%= product.price %>
   </td>
 </tr>
