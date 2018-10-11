@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for your purchase</h1>
+    <p>
+      You have successfully completed the order <%= @order.id %><br>
+    </p>
+    <li>
+      <% @order.line_items.each do |item| %>
+      <%= item.quantity %>
+      <%= item.product.name %>
+      <% end %>
+    </li>
+    <li>
+      Total: $<%= @order.total_cents / 100 %>
+    <p>Have a great day!</p>
+  </body>
+</html>
+
+<!-- http://localhost:3000/rails/mailers/order_mailer/send_email -->
