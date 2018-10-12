@@ -1,3 +1,5 @@
+<% r = Review.find_by(id: 1) %>
+
 <section class="products-show">
 
   <header class="page-header">
@@ -23,8 +25,26 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
+        <br/><br/>
+        <div class="col-sm-8">
+          <%= form_for [@product, @review], html: {class: "nifty_form"} do |f| %>
+            <%= f.select :rating, [5, 4, 3, 2, 1]%>
+            <br/>
+            <%= f.text_area :description %>
+            <br />
+            <%= f.submit "Create" %>
+            <br/> <br/>
+          <% end %>
+          <dl>
+            <dt>Rating: </dt>
+            <dd><%= r.rating %></dd>
+            <dt>Description: </dt>
+            <dd><%= r.description %></dd>
+          </dl>
+        </div>
       </div>
     </div>
+
 
   </article>
 

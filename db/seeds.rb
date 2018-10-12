@@ -132,5 +132,13 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+prod1 = Product.find_or_create_by! id: 1
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: "Not bad",
+  rating: 4
+})
+
 
 puts "DONE!"
