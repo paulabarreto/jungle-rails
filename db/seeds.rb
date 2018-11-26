@@ -47,7 +47,7 @@ cat1.products.create!({
   name:  'Women\'s Zebra pants',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
-  quantity: 18,
+  quantity: 0,
   price: 124.99
 })
 
@@ -79,7 +79,7 @@ cat1.products.create!({
   name:  'Human Feet Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
-  quantity: 0,
+  quantity: 10,
   price: 224.50
 })
 
@@ -104,7 +104,7 @@ cat2.products.create!({
   name:  'World\'s Largest Smartwatch',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics3.jpg'),
-  quantity: 32,
+  quantity: 0,
   price: 2_026.29
 })
 
